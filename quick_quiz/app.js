@@ -13,9 +13,6 @@ const cors = require("cors");
 // my own router
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const dishes = require('./routes/dishRouter');
-const leaders = require('./routes/leaderRouter');
-const promotions = require('./routes/promoRouter');
 const addquizs = require('./routes/addquizRouter');
 
 const mongoose = require('mongoose');
@@ -48,9 +45,6 @@ app.use('/users', usersRouter);
 
 app.use(express.static(path.join(__dirname, 'public'))); // open for any user to access without authentication.
 
-app.use('/dishes', dishes);
-app.use('/leaders', leaders);
-app.use('/promotions', promotions);
 app.use('/addquiz',addquizs);
 
 
