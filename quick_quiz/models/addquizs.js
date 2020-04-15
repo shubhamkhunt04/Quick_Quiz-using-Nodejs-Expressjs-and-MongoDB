@@ -14,8 +14,6 @@ const optionSchema = new Schema({
     D: {
         type: String,
     }
-}, {
-    timestamps: true
 });
 
 

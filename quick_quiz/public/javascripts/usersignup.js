@@ -37,65 +37,70 @@ document.getElementById('ssignup').addEventListener('click', (e) => {
         .then((json) => {
             console.log(json);
             if (json.success == true) {
-               location = "../about.html"
+                location = "../login.html"
             }
 
         })
 
         .catch((err) => console.log("Error occure"));
 
+
+    susername.value = ""
+    spassword.value = ""
+    semail.value = ""
+    smobile.value = ""
+    scollege.value = ""
 })
 
 
 
 
-let lusername = document.getElementById('lusername');
-let lpassword = document.getElementById('lpassword');
+// let lusername = document.getElementById('lusername');
+// let lpassword = document.getElementById('lpassword');
 
 
-document.getElementById('llogin').addEventListener('click', (e) => {
+// document.getElementById('llogin').addEventListener('click', (e) => {
 
-    // console.log("login clicked")
+//     // console.log("login clicked")
 
-    let url = "http://localhost:3000/users/login";
+//     let url = "http://localhost:3000/users/login";
 
-    let data = {
+//     let data = {
 
-        "username": lusername.value,
-        "password": lpassword.value
-    }
+//         "username": lusername.value,
+//         "password": lpassword.value
+//     }
 
-    let params = {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    }
+//     let params = {
+//         method: 'POST',
+//         body: JSON.stringify(data),
+//         headers: {
+//             'Content-Type': 'application/json',
+//         }
+//     }
 
-    // console.log("now fetch call");
-    fetch(url, params)
-        .then((res) => {
-            return res.json();
-        })
+//     // console.log("now fetch call");
+//     fetch(url, params)
+//         .then((res) => {
+//             return res.json();
+//         })
 
-        .then((json) => {
-            console.log(json);
-            if (json.success == true) {
-               location = "../about.html";
-               localStorage.setItem('token',json.token);
-            }
+//         .then((json) => {
+//             console.log(json);
+//             if (json.success == true) {
+//                location = "../dash.html";
+//                localStorage.setItem('token',json.token);
+//             }
+//             else
+//             {
+//                 console.log("Unauthorized user");
+//             }
 
-        })
+//         })
 
-        .catch((err) => console.log("Error occure"));
+//         .catch((err) => console.log("Error occure"));
 
-})
-
-
-
-
-
+// })
 
 
 
@@ -139,8 +144,3 @@ document.getElementById('llogin').addEventListener('click', (e) => {
 //         .catch((err) => console.log("Error occure"));
 
 // })
-
-
-
-
-

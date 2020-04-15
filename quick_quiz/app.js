@@ -13,7 +13,11 @@ const cors = require("cors");
 // my own router
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
 const addquizs = require('./routes/addquizRouter');
+const scores = require('./routes/score');
+const contact = require('./routes/contactus');
+const admin = require('./routes/adminlogin');
 
 const mongoose = require('mongoose');
 
@@ -42,10 +46,16 @@ app.use(passport.initialize());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// app.use(express.static(path.join(__dirname, 'public/anyuser')));
+// app.use(authenticate.verifyUser);
 
 app.use(express.static(path.join(__dirname, 'public'))); // open for any user to access without authentication.
 
+
 app.use('/addquiz',addquizs);
+app.use('/score',scores);
+app.use('/contactus',contact);
+app.use('/adminlogin',admin);
 
 
 // catch 404 and forward to error handler

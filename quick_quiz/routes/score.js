@@ -3,85 +3,51 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const authenticate = require("../authenticate");
 
-const Leader = require("../models/leaders"); 
+const User = require("../models/user");
 
-const leaders = express.Router();
+const users = express.Router();
 
-leaders.use(bodyParser.json());
+users.use(bodyParser.json());
 
-leaders.route('/')
-.get((req,res,next)=>{
-    Leader.find({})
-    .then((leader)=>{
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(leader);
-    },(err)=>next(err))
-    .catch((err)=>next(err));
-})
-.post(authenticate.verifyUser,authenticate.verifyAdmin, (req,res,next)=>{
-    Leader.create(req.body)
-    .then((leader)=>{
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(leader);
-    },
-        (err)=>next(err))
-    .catch((err)=>next(err));
-})
-.put(authenticate.verifyUser,authenticate.verifyAdmin, (req,res,next)=>{
-    res.statusCode = 403;
-    res.end('PUT operation dose not support on /leader');
-})
-.delete(authenticate.verifyUser,authenticate.verifyAdmin, (req,res,next)=>{
-    Leader.remove({})
-    .then((resp)=>{
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(resp);
-    },
-    (err)=>next(err))
-.catch((err)=>next(err));
-});
+users.route('/')
+    .get(authenticate.verifyUser,(req, res, next) => {
+        User.findById(req.user._id)
+            .then((user) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(user.score);
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    })
+    .post(authenticate.verifyUser, (req, res, next) => {
+        res.statusCode = 403;
+        res.end('POST operation not supported on /scores');
+    })
+    .put(authenticate.verifyUser, (req, res, next) => {
 
+        User.findById(req.user._id)
+            .then((user) => {
+                console.log(user);
+                if(user!=null)
+                {
+                user.score = req.body.score;     
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(user);
+                user.save();
+                }
+                else{
+                    let err = new Error("your score is not updated");
+                    next(err);
+                    return;
+                }
+            },
+                (err) => next(err))
+            .catch((err) => next(err));
+    })
+    .delete(authenticate.verifyUser, (req, res, next) => {
+        res.statusCode = 403;
+        res.end('DELETE operation not supported on /scores');
+    });
 
-
-
-leaders.route('/:leadersId')
-.get((req,res,next)=>{
-    Leader.findById(req.params.leadersId)
-    .then((leader)=>{
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(leader);
-    },(err)=>next(err))
-    .catch((err)=>next(err));
-})
-.post(authenticate.verifyUser,authenticate.verifyAdmin, (req,res,next)=>{
-    res.statusCode = 403;
-    res.end('POST operation not supported on /leaders/'+req.params.leadersId);
-})
-.put(authenticate.verifyUser,authenticate.verifyAdmin, (req,res,next)=>{
-    Leader.findByIdAndUpdate(req.params.leadersId,{
-        $set:req.body
-    },{new :true})
-    .then((leader)=>{
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(leader);
-    },(err)=>next(err))
-    .catch((err)=>next(err));
-})
-.delete(authenticate.verifyUser,authenticate.verifyAdmin, (req,res,next)=>{
-    Leader.findByIdAndRemove(req.params.leadersId)
-    .then((resp)=>{
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(resp);
-    },
-    (err)=>next(err))
-.catch((err)=>next(err));
-});
-
-
-module.exports = leaders;
+module.exports = users;

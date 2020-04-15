@@ -57,7 +57,6 @@ router.post('/signup', (req, res, next) => {
 router.post('/login', passport.authenticate('local'), (req, res) => {  // if successfully authenticated then load req.user property.
 
   //create token by server
-
   let token = authenticate.getToken({ _id: req.user._id });  // payload
 
 

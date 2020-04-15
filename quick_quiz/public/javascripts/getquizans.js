@@ -1,3 +1,4 @@
+let token = localStorage.getItem("token");
 let data = sessionStorage.getItem("mydata");        // read data from session storage;
 
 let jsondata = JSON.parse(data);
@@ -58,27 +59,59 @@ document.getElementById('anssub').addEventListener('click', (e) => {    // user 
         if (ele[i].type = "radio") {
 
             if (ele[i].checked) {                                       // geting user checked answer and push into userans[]
-                    userans.push(ele[i].value);
-              
+                userans.push(ele[i].value);
+
             }
         }
     }
 
     let score = 0;
     let actualans = []
-    jsondata.forEach((element)=>{ 
-            actualans.push(element.answer);
+    jsondata.forEach((element) => {
+        actualans.push(element.answer);
     })
 
     //comparing useranswer and actual answer
-    for(let it=0;it<userans.length;it++){
-        if(userans[it]===actualans[it])
+    for (let it = 0; it < userans.length; it++) {
+        if (userans[it] === actualans[it])
+        {
             score++;
+        }
     }
     console.log(score);
+    let totalqustion = actualans.length;   // storing total qustion
+    sessionStorage.setItem('totalqustion',totalqustion);
+    sessionStorage.setItem('myscore', score);
 
-    // location = "../about.html";
 
+    // updating score (serverside database)
+
+    let url = "http://localhost:3000/score";
+
+    let data = {
+        "score": score
+    }
+
+    let paramsp = {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    }
+
+    // console.log("now fetch call");
+    fetch(url, paramsp)
+        .then((res) => {
+            return res.json();
+        })
+        .then((json) => {
+            console.log(json);
+            location = "../score.html";
+        })
+
+        .catch((err) => console.log("Error occure",err));
 });
 
 document.getElementById('show').innerHTML = html;

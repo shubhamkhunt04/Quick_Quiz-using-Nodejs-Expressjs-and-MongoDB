@@ -16,7 +16,10 @@ var User = new Schema({
         type:Number,
         
     },
-
+    score:{
+        type:Number,
+        default:0
+    },
 
     admin:{
         type:Boolean,
