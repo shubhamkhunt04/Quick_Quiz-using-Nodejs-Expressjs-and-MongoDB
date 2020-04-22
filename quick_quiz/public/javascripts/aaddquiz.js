@@ -1,4 +1,5 @@
 let token = localStorage.getItem("token")
+
 let qus = document.getElementById('qus');
 let opsa = document.getElementById('opsa');
 let opsb = document.getElementById('opsb');
@@ -6,28 +7,34 @@ let opsc = document.getElementById('opsc');
 let opsd = document.getElementById('opsd');
 let curans = document.getElementById('curans');
 
+let quizname = sessionStorage.getItem('quizname');
+console.log(quizname);
+
 document.getElementById('addqus').addEventListener('click', (e) => {
 
     let urls = "http://localhost:3000/addquiz";
-
+    e.preventDefault();
     let datas = {
+        "quizname": quizname,
 
-        "qustion": qus.value,
-        "answer": curans.value,
+        "qusans": {
 
-        "options": [{
-                "A": opsa.value
-            }, {
-                "B": opsb.value
-            }, {
+            "qustion": qus.value,
+            "answer": curans.value,
 
-                "C": opsc.value
-            }, {
+            "options": [{
+                    "A": opsa.value
+                }, {
+                    "B": opsb.value
+                }, {
 
-                "D": opsd.value
-            }
+                    "C": opsc.value
+                }, {
 
-        ]
+                    "D": opsd.value
+                }
+            ]
+        }
     }
 
     let paramss = {

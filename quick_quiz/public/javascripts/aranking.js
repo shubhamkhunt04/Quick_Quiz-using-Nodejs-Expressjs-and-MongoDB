@@ -31,8 +31,8 @@ fetch(url, params)
         let index = 1;
         let html1 = `
             <!-- table start -->
-
-            <div class="container my-4 w-75">
+ 
+            <div class="container my-4 w-75 table-responsive">
         
                 <table class="table table-striped">
                     <thead>
@@ -72,4 +72,4 @@ fetch(url, params)
         document.getElementById('userranking').innerHTML = html
 
     })
-    .catch((err) => console.log("Error occure"));
+    .catch((err) => console.log("Error occure",err));

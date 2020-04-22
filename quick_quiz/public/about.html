@@ -12,108 +12,117 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+
 </head>
 
 <body>
-  <!-- navbar start -->
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand font-weight-bold text-warning" href="#">Quick Quiz</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  
+<!-- navbar start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand font-weight-bold text-warning" href="#">Quick Quiz</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link active zoom" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        </li>
-      </ul>
-
-
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link zoom" href="about.html">About<span class="sr-only">(current)</span></a>
-        </li>
-        </li>
+          <li class="nav-item">
+              <a class="nav-link zoom" href="dash.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          </li>
       </ul>
 
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link zoom" href="contactus.html">Contact<span class="sr-only">(current)</span></a>
-        </li>
-        </li>
+          <li class="nav-item">
+              <a class="nav-link zoom" href="ranking.html">Ranking<span
+                      class="sr-only">(current)</span></a>
+          </li>
+          </li>
+      </ul>
+
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link active zoom" href="about.html">About<span class="sr-only">(current)</span></a>
+          </li>
+          </li>
+      </ul>
+
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link zoom" href="contactus.html">Contact<span class="sr-only">(current)</span></a>
+          </li>
+          </li>
       </ul>
       <button type="button" class="btn btn-outline-warning mx-2" id="userlogout">
-        Logout
+          Logout
       </button>
-    </div>
-  </nav>
 
-  <!-- navbar end  -->
+  </div>
+</nav>
+
+<!-- navbar end  -->
+
+
 
   <!-- about start -->
 
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid mt-3">
     <div class="container text-center">
-      <h1 class="display-4">About Us</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      <h1 class="mb-3">About Us</h1>
+      <p class="lead">Our mission is what drives us to do everything possible to expand human potential. We do that by
+        improving student capability and skills, by making our products more sustainably, by building a creative and
+        diverse global team and by making a positive impact in communities where we live and work.</p>
     </div>
   </div>
-  <h2 class="text-center my-1">Our Team</h2>
 
 
-  <div class="container">
+  <h1 class="text-center my-1">Our Team</h1>
+
+
+  <div class="container backcolor">
     <div class="row justify-content-center">
-      <div class="col-md-4">
+      <div class="col-md-4 w-auto my-3">
         <div class="card shadow" style="width: 20rem;">
           <div class="inner">
-            <img class="card-img-top" src="./images/2.jpg" alt="Card image cap">
+            <img class="card-img-top" src="./images/shubhamkhunt.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
-            <h2 class="card-title">Jane Doe</h2>
+            <h4 class="card-title">Shubham Khunt</h4>
             <p class="card-title">CEO & Founder</p>
-            <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-            <a href="#" class="btn btn-success">Learn More...</a>
+            <button id="conbtn1" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <div id="showmynum1"></div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
+
+      <div class="col-md-4 w-auto my-3">
         <div class="card shadow" style="width: 20rem;">
           <div class="inner">
-            <img class="card-img-top" src="./images/2.jpg" alt="Card image cap">
+            <img class="card-img-top" src="./images/mikeross.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
-            <h2 class="card-title">Jane Doe</h2>
-            <p class="card-title">CEO & Founder</p>
-            <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-            <a href="#" class="btn btn-success">Learn More...</a>
+            <h4 class="card-title">Mike Ross</h4>
+            <p class="card-title">Art Director</p>
+            <button id="conbtn2" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <div id="showmynum2"></div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 w-auto my-3">
         <div class="card shadow" style="width: 20rem;">
           <div class="inner">
-            <img class="card-img-top" src="./images/2.jpg" alt="Card image cap">
+            <img class="card-img-top" src="./images/johncrippo.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
-            <h2 class="card-title">Jane Doe</h2>
-            <p class="card-title">CEO & Founder</p>
-            <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-            <a href="#" class="btn btn-success">Learn More...</a>
+            <h4 class="card-title">John Crippo</h4>
+            <p class="card-title">Designer</p>
+            <button id="conbtn3" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <div id="showmynum3"></div>
           </div>
         </div>
       </div>
@@ -123,6 +132,14 @@
 
 
 
+  <!-- footer start -->
+
+  <footer class="mt-1">
+    <div class="text-center">
+      <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html" style="text-decoration: underline;color: black;" >Privacy Policy</a></span></p>
+    </div>
+  </footer>
+  <!-- footer end -->
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -134,7 +151,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
-      <script src="./javascripts/logout.js"></script>
+    <script src="./javascripts/logout.js"></script>
+    <script src="./javascripts/mycontact.js"></script>
 </body>
 
 </html>

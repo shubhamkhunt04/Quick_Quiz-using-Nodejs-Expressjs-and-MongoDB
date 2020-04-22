@@ -18,7 +18,7 @@ fetch(url, params)
         let inedex = 1;
         let html1 = `<!-- table start -->
 
-        <div class="container my-4">
+        <div class="container my-4 table-responsive">
      
          <table class="table table-striped">
              <thead>

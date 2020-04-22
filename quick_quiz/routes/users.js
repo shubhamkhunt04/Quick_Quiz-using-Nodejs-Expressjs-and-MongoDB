@@ -9,7 +9,7 @@ router.use(bodyParser.json());
 
 
 /* GET users listing. */
-router.get('/',authenticate.verifyUser, authenticate.verifyAdmin, (req,res,next)=> {
+router.get('/',authenticate.verifyUser,(req,res,next)=> {
   console.log("ok");
   User.find({})
   .then((userdata) => {

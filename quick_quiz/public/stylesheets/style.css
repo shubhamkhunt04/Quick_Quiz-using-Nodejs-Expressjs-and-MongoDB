@@ -1,8 +1,29 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*================ scrolling effect============== */
+html{
+  scroll-behavior: smooth;
 }
+
+/*================ Font Settings ============== */
+
+body {
+  /* padding: 50px; */
+  font-family: 'Muli', sans-serif;
+}
+
+/*================ link settings============== */
 
 a {
   color: #00B7FF;
 }
+
+.backcolor
+{
+  background-color: white;
+}
+
+/*================ carousel effect============== */
+
+.carousel-item{
+  margin-top: 55px;
+}
+

@@ -18,16 +18,21 @@ const optionSchema = new Schema({
 
 
 const quizSchema = new Schema({
-    qustion: {
-        type: String,
-        required: true,
-        unique: true
+    quizname: {
+        type: String
     },
-    answer:{
-        type:String,
-        required:true
-    },
-    options: [optionSchema]
+    qusans:[{
+        qustion: {
+            type: String,
+            required:true
+        },
+        answer: {
+            type: String,
+            required: true
+        },
+        options: [optionSchema]
+    }]
+
 }, {
     timestamps: true
 });
@@ -35,4 +40,3 @@ const quizSchema = new Schema({
 var Quizs = mongoose.model('quiz', quizSchema);
 
 module.exports = Quizs
-

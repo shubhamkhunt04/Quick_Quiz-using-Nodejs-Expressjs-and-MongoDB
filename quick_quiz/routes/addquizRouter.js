@@ -21,12 +21,37 @@ quizs.route('/')
     .catch((err)=>next(err));
 })
 .post(authenticate.verifyUser,authenticate.verifyAdmin,(req,res,next)=>{
-    Quiz.create(req.body)
+    // console.log(req.body.quizname)
+    // console.log(req.body);
+    Quiz.findOne({quizname:req.body.quizname})
     .then((quiz)=>{
-        console.log("quiz Created ",quiz);
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(quiz);
+        if(quiz==null)
+        {
+            console.log("null")
+            Quiz.create(req.body)
+            .then((quiz)=>{
+                // console.log("quiz Created ",quiz);
+                res.statusCode = 200;
+                res.setHeader('Content-Type','application/json');
+                res.json(quiz);
+            },(err)=>console.log(err));
+
+        }else
+        {
+            // console.log(quiz.qusans)
+            // console.log(req.body.qusans)
+            quiz.qusans.push(req.body.qusans);
+            // quiz.qusans.push(req.quiz.qusans);
+            // console.log(quiz.qusans);
+            // console.log(req.body.qusans);
+            
+
+            quiz.save((err,res)=>{
+                if(err) console.log(err)
+                else console.log("successfully push");
+            })
+            res.json(quiz);
+        } 
     },
         (err)=>next(err))
     .catch((err)=>next(err));
@@ -50,7 +75,7 @@ quizs.route('/')
 
 quizs.route('/:quizId')
 .get(authenticate.verifyUser,(req,res,next)=>{
-    Quiz.findById(req.params.quizId)
+    Quiz.findOne({quizname : req.params.quizId})
     .then((quiz)=>{
         res.statusCode = 200;
         res.setHeader('Content-Type','application/json');
@@ -63,18 +88,11 @@ quizs.route('/:quizId')
     res.end('POST operation not supported on /addquiz/'+req.params.dishId);
 })
 .put(authenticate.verifyUser,authenticate.verifyAdmin,(req,res,next)=>{
-    Quiz.findByIdAndUpdate(req.params.quizId,{
-        $set:req.body
-    },{new :true})
-    .then((quiz)=>{
-        res.statusCode = 200;
-        res.setHeader('Content-Type','application/json');
-        res.json(quiz);
-    },(err)=>next(err))
-    .catch((err)=>next(err));
+    res.statusCode = 403;
+    res.end('PUT operation not supported on /addquiz/'+req.params.dishId);
 })
 .delete(authenticate.verifyUser,authenticate.verifyAdmin,(req,res,next)=>{
-    Quiz.findByIdAndRemove(req.params.quizId)
+    Quiz.findOneAndRemove(req.params.quizId)
     .then((resp)=>{
         res.statusCode = 200;
         res.setHeader('Content-Type','application/json');

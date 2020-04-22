@@ -8,19 +8,21 @@
 
   <link rel="stylesheet" href="./stylesheets/contactus.css">
   <link rel="stylesheet" href="./stylesheets/about.css">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/style.css">
   <link rel="stylesheet" href="./stylesheets/zoom.css">
 
 </head>
 
 <body>
+  
 
   <!-- navbar start -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand font-weight-bold text-warning" href="#">Quick Quiz</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +32,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link active zoom" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link active zoom" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         </li>
       </ul>
@@ -38,14 +40,14 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link zoom" href="about.html">About<span class="sr-only">(current)</span></a>
+          <a class="nav-link zoom" href="#aboutid">About<span class="sr-only">(current)</span></a>
         </li>
         </li>
       </ul>
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link zoom" href="contactus.html">Contact<span class="sr-only">(current)</span></a>
+          <a class="nav-link zoom" href="#contactusid">Contact<span class="sr-only">(current)</span></a>
         </li>
         </li>
       </ul>
@@ -65,13 +67,13 @@
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2000">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./images/1.jpg" class="d-block w-100" alt="quiz1.jpg">
+        <img src="./images/landing1.jpg" class="d-block img-fluid" alt="quiz1.jpg">
       </div>
       <div class="carousel-item">
-        <img src="./images/2.jpg" class="d-block w-100" alt="quiz2.jpg">
+        <img src="./images/landing2.jpg" class="d-block img-fluid" alt="quiz2.jpg">
       </div>
       <div class="carousel-item">
-        <img src="./images/3.jpg" class="d-block w-100" alt="quiz3.jpg">
+        <img src="./images/landing3.jpg" class="d-block img-fluid" alt="quiz3.jpg">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -170,67 +172,89 @@
   </div>
   <!-- login landing page end -->
 
+  <div class="container my-3 backcolor">
+    <h1 class="text-center">Using Quick Quiz for Distance Learning</h1>
+  </div>
+
+<div class="container backcolor">
+  <div class="row">
+
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+      <img src="./images/person_holding_phone.png" alt="img" width="150" height="150" class="zoom">
+      <h4>Students ALWAYS see questions on their own screen.</h4>
+      <p class="font-weight-light">No stressing about whether everyone joined your video conference.</p>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+      <img src="./images/people_at_home.png" alt="img" width="150" height="150" class="zoom">
+      <h4>Bring people together (apart) with live quizzes and polls.</h4>
+      <p class="font-weight-light">Build community and keep everyone engaged even if you’re not in the same place!</p>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+        <img src="./images/people_around_globe.png" alt="img" width="150" height="150" class="zoom">
+        <h4>Assign quizzes and engage families on their own time.</h4>
+        <p class="font-weight-light">Create student-paced assignments, share flashcards, and get families involved too.</p>
+        </div>
+  </div>
+</div>
 
   <!-- about start -->
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container text-center">
-      <h1 class="display-4">About Us</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  <div class="jumbotron jumbotron-fluid mt-3">
+    <div class="container text-center" id="aboutid">
+      <h1 class="mb-3">About Us</h1>
+      <p class="lead">Our mission is what drives us to do everything possible to expand human potential. We do that by
+        improving student capability and skills, by making our products more sustainably, by building a creative and
+        diverse global team and by making a positive impact in communities where we live and work.</p>
     </div>
   </div>
-  <h2 class="text-center my-1">Our Team</h2>
 
 
-  <div class="container">
+  <h1 class="text-center my-1">Our Team</h1>
+
+
+  <div class="container backcolor">
     <div class="row justify-content-center">
-      <div class="col-md-4">
+      <div class="col-md-4 w-auto my-3">
         <div class="card shadow" style="width: 20rem;">
           <div class="inner">
-            <img class="card-img-top" src="./images/2.jpg" alt="Card image cap">
+            <img class="card-img-top" src="./images/shubhamkhunt.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
-            <h2 class="card-title">Jane Doe</h2>
+            <h4 class="card-title">Shubham Khunt</h4>
             <p class="card-title">CEO & Founder</p>
-            <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-            <a href="#" class="btn btn-success">Learn More...</a>
+            <button id="conbtn1" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <div id="showmynum1"></div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
+
+      <div class="col-md-4 w-auto my-3">
         <div class="card shadow" style="width: 20rem;">
           <div class="inner">
-            <img class="card-img-top" src="./images/2.jpg" alt="Card image cap">
+            <img class="card-img-top" src="./images/mikeross.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
-            <h2 class="card-title">Jane Doe</h2>
-            <p class="card-title">CEO & Founder</p>
-            <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-            <a href="#" class="btn btn-success">Learn More...</a>
+            <h4 class="card-title">Mike Ross</h4>
+            <p class="card-title">Art Director</p>
+            <button id="conbtn2" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <div id="showmynum2"></div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 w-auto my-3">
         <div class="card shadow" style="width: 20rem;">
           <div class="inner">
-            <img class="card-img-top" src="./images/2.jpg" alt="Card image cap">
+            <img class="card-img-top" src="./images/johncrippo.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
-            <h2 class="card-title">Jane Doe</h2>
-            <p class="card-title">CEO & Founder</p>
-            <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-            <a href="#" class="btn btn-success">Learn More...</a>
+            <h4 class="card-title">John Crippo</h4>
+            <p class="card-title">Designer</p>
+            <button id="conbtn3" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <div id="showmynum3"></div>
           </div>
         </div>
       </div>
@@ -244,9 +268,9 @@
 
     <!-- contact form start -->
 
-    <div class="container">
+    <div class="container" id="contactusid">
       <div style="text-align:center">
-        <h2>Contact Us</h2>
+        <h1>Contact Us</h1>
         <p>Swing by for a cup of coffee, or leave us a message:</p>
       </div>
       <div class="row">
@@ -276,6 +300,17 @@
 
     <!-- contact form end -->
 
+  <!-- footer start -->
+
+  <footer class="mt-1">
+    <div class="text-center">
+      <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html" style="text-decoration: underline;color: black;" >Privacy Policy</a></span></p>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+    
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"></script>
@@ -286,16 +321,10 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
 
-
-
-
-      
-
-
-
     <script src="./javascripts/usersignup.js"></script>
     <script src="./javascripts/userlogin.js"></script>
     <script src="./javascripts/contactus.js"></script>
+    <script src="./javascripts/mycontact.js"></script>
 </body>
 
 </html>

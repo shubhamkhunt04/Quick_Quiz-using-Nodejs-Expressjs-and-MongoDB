@@ -1,6 +1,7 @@
 let token = localStorage.getItem("token");
 // document.getElementById('startid').addEventListener('click',(e)=>{
 
+
 let url = 'http://localhost:3000/addquiz';
 
 let params = {
@@ -19,15 +20,14 @@ fetch(url, params)
 
         var index = 1;
         let html = "";
-        html1 = `<hr><div class="container my-5 table-responsive">
+        html1 = `<hr><div class="container my-5 w-75 table-responsive">
     <table class="table table-hover table-primary" id="outline">
       <thead>
         <tr>
           <th scope="col">Sr.No.</th>
           <th scope="col">Topic</th>
-          <th scope="col">Total Qustion</th>
-          <th scope="col">Total Marks</th>
           <th scope="col">Let's GO</th>
+          <th scope="col">Delete Quiz</th>
         </tr>
       </thead>
       <tbody>
@@ -38,14 +38,12 @@ fetch(url, params)
   </div>`;
 
         json.forEach(element => {
-
             html2 += `
       <tr>
         <th scope="row">${index}</th>
         <th>${element.quizname}</th>
-        <th>${element.qusans.length}</th>
-        <th>${element.qusans.length}</th>
         <th class="zoom"><button type="button" id="startbtn${index}" class="btn btn-dark" value="${element.quizname}">START</button></th>
+        <th class="zoom"><button type="button" id="deletebtn${index}" class="btn" value="${element.quizname}"><img src="./images/delete.svg" width="30" height="30" /></button></th>
       </tr>`;
             index++;
         });
@@ -63,6 +61,35 @@ fetch(url, params)
             })
         }
 
+        for(let i=1;i<index;i++)
+        {
+            document.getElementById(`deletebtn${i}`).addEventListener('click',(e)=>{
+                // console.log(document.getElementById(`deletebtn${i}`).value);
+                let targetquizForDelete =  document.getElementById(`deletebtn${i}`).value;
+                
+                let url = `http://localhost:3000/addquiz/${targetquizForDelete}`;
+            
+                console.log(url)
+                let params = {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + token
+                    }
+                }
+            
+                fetch(url, params)
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((json) => {
+                       console.log("deleted ",json);
+                       location.reload(); 
+                    })
+                    .catch((err) => alert("Unauthorized user",err));
+            })
+            
+        }
         
 // document.getElementById(`startbtn${index}`).addEventListener('click',(e)=>{
 //     console.log(`clicked ${index}`);
