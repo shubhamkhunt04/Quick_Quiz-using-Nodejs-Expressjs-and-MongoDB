@@ -32,9 +32,9 @@ fetch(url, params)
         let html1 = `
             <!-- table start -->
  
-            <div class="container my-4 w-75 table-responsive">
+            <div class="container my-4 w-100 table-responsive">
         
-                <table class="table table-striped">
+                <table class="table table-striped text-dark">
                     <thead>
                         <tr class="text-danger">
                             <th scope="col">Rank</th>
@@ -72,4 +72,14 @@ fetch(url, params)
         document.getElementById('userranking').innerHTML = html
 
     })
-    .catch((err) => console.log("Error occure",err));
+    .catch((err) => console.log("Error occure", err));
+
+/*
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/

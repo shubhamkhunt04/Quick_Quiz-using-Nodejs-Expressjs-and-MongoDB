@@ -1,14 +1,11 @@
 let ausername = document.getElementById('ausername');
 let apassword = document.getElementById('apassword');
 
-// console.log(ausername);
-// console.log(apassword);
-// console.log(document.getElementById('alogin'))
 
 document.getElementById('alogin').addEventListener('click', (e) => {
 
     // console.log("alogin clicked")
-     e.preventDefault();
+    e.preventDefault();
     let url = "http://localhost:3000/adminlogin/login";
 
     let data = {
@@ -23,7 +20,7 @@ document.getElementById('alogin').addEventListener('click', (e) => {
         }
     }
 
-    // console.log("now fetch call");
+    // console.log("now fetch call time");
     fetch(url, params)
         .then((res) => {
             return res.json();
@@ -40,22 +37,30 @@ document.getElementById('alogin').addEventListener('click', (e) => {
               </div>
               </div>
               `
-               location = "../adminpannel.html";
-               localStorage.setItem('token',json.token);
+                location = "../adminpannel.html";
+                localStorage.setItem('token', json.token);
             }
         })
-        .catch((err) =>{
+        .catch((err) => {
             document.getElementById('message').innerHTML = `
             <div class="container">
             <div class="alert alert-danger my-3" role="alert">
             Authentication Failed 
             </div>
           </div>`
-          console.log("authentication failed")
-        } );
+            console.log("authentication failed")
+        });
 
-        ausername.value = "";
-        apassword.value = "";
+    ausername.value = "";
+    apassword.value = "";
 })
 
+/*
+created by Shubham Khunt
 
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/

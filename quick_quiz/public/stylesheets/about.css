@@ -1,15 +1,33 @@
-.container{
+/*================== card effect================= */
+.container {
     margin-top: 3%;
 }
- 
-.inner{
+
+.inner {
     overflow: hidden;
 }
- 
-.inner img{
+
+.inner img {
     transition: all 1.2s ease;
 }
- 
-.inner:hover img{
+
+.inner:hover img {
     transform: scale(1.2);
+}
+
+/*================= contact icon ==============*/
+.icons {
+    text-align: center;
+}
+
+.fa-linkedin {
+    color: black;
+}
+
+.fa-github-square {
+    color: black;
+}
+
+.fa-envelope-square {
+    color: black;
 }

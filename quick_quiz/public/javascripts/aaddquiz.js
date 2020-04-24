@@ -23,17 +23,16 @@ document.getElementById('addqus').addEventListener('click', (e) => {
             "answer": curans.value,
 
             "options": [{
-                    "A": opsa.value
-                }, {
-                    "B": opsb.value
-                }, {
+                "A": opsa.value
+            }, {
+                "B": opsb.value
+            }, {
 
-                    "C": opsc.value
-                }, {
+                "C": opsc.value
+            }, {
 
-                    "D": opsd.value
-                }
-            ]
+                "D": opsd.value
+            }]
         }
     }
 
@@ -62,3 +61,13 @@ document.getElementById('addqus').addEventListener('click', (e) => {
     opsc.value = "";
     opsd.value = "";
 });
+
+/*
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/

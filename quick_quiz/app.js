@@ -1,3 +1,13 @@
+/*
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -27,7 +37,9 @@ const connect = mongoose.connect(url);
 
 connect.then((db) => {
   console.log("Connected correctly to server");
-}, (err) => { console.log(err); });
+}, (err) => {
+  console.log(err);
+});
 
 var app = express();
 app.use(cors());
@@ -38,7 +50,9 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 
 
 app.use(passport.initialize());
@@ -52,10 +66,10 @@ app.use('/users', usersRouter);
 app.use(express.static(path.join(__dirname, 'public'))); // open for any user to access without authentication.
 
 
-app.use('/addquiz',addquizs);
-app.use('/score',scores);
-app.use('/contactus',contact);
-app.use('/adminlogin',admin);
+app.use('/addquiz', addquizs);
+app.use('/score', scores);
+app.use('/contactus', contact);
+app.use('/adminlogin', admin);
 
 
 // catch 404 and forward to error handler

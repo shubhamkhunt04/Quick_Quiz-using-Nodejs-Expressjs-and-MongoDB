@@ -1,3 +1,4 @@
+/*======================== result animation===================== */
 .animate {
     animation: colorchanger 4s infinite;
     color: green;
@@ -41,7 +42,7 @@
 @keyframes textscal {
     0% {
         text-transform: scale(1);
-        font-size: 60px;
+        font-size: 50px;
     }
 
     20% {
@@ -53,6 +54,10 @@
     }
 
     60% {
+        text-transform: scale(0.75);
+    }
+
+    80% {
         text-transform: scale(0.75);
     }
 

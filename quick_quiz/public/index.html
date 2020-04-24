@@ -1,3 +1,13 @@
+<!-- 
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,17 +18,22 @@
 
   <link rel="stylesheet" href="./stylesheets/contactus.css">
   <link rel="stylesheet" href="./stylesheets/about.css">
+  <!-- bootstrap cdn -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./stylesheets/style.css">
+  <!-- font cnd -->
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
+  <!-- main style -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
   <link rel="stylesheet" href="./stylesheets/zoom.css">
+  <!-- icon cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
 
 <body>
-  
+
 
   <!-- navbar start -->
 
@@ -64,7 +79,13 @@
 
   <!-- carousel start -->
 
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2000">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="./images/landing1.jpg" class="d-block img-fluid" alt="quiz1.jpg">
@@ -76,14 +97,6 @@
         <img src="./images/landing3.jpg" class="d-block img-fluid" alt="quiz3.jpg">
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 
   <!-- carousel end -->
@@ -139,7 +152,7 @@
 
   <!-- login landing page start -->
   <!-- Modal -->
-  
+
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -176,33 +189,34 @@
     <h1 class="text-center">Using Quick Quiz for Distance Learning</h1>
   </div>
 
-<div class="container backcolor">
-  <div class="row">
+  <div class="container backcolor">
+    <div class="row">
 
-    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-      <img src="./images/person_holding_phone.png" alt="img" width="150" height="150" class="zoom">
-      <h4>Students ALWAYS see questions on their own screen.</h4>
-      <p class="font-weight-light">No stressing about whether everyone joined your video conference.</p>
+      <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+        <img src="./images/person_holding_phone.png" alt="img" width="150" height="150" class="zoom">
+        <h4>Students ALWAYS see questions on their own screen.</h4>
+        <p class="font-weight-light">No stressing about whether everyone joined your video conference.</p>
       </div>
 
-    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-      <img src="./images/people_at_home.png" alt="img" width="150" height="150" class="zoom">
-      <h4>Bring people together (apart) with live quizzes and polls.</h4>
-      <p class="font-weight-light">Build community and keep everyone engaged even if you’re not in the same place!</p>
+      <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+        <img src="./images/people_at_home.png" alt="img" width="150" height="150" class="zoom">
+        <h4>Bring people together (apart) with live quizzes and polls.</h4>
+        <p class="font-weight-light">Build community and keep everyone engaged even if you’re not in the same place!</p>
       </div>
 
       <div class="col-lg-4 col-md-4 col-sm-12 text-center">
         <img src="./images/people_around_globe.png" alt="img" width="150" height="150" class="zoom">
         <h4>Assign quizzes and engage families on their own time.</h4>
-        <p class="font-weight-light">Create student-paced assignments, share flashcards, and get families involved too.</p>
-        </div>
+        <p class="font-weight-light">Create student-paced assignments, share flashcards, and get families involved too.
+        </p>
+      </div>
+    </div>
   </div>
-</div>
 
   <!-- about start -->
 
-  <div class="jumbotron jumbotron-fluid mt-3">
-    <div class="container text-center" id="aboutid">
+  <div class="jumbotron jumbotron-fluid backcolor mt-3" id="aboutid">
+    <div class="container text-center bg-dark">
       <h1 class="mb-3">About Us</h1>
       <p class="lead">Our mission is what drives us to do everything possible to expand human potential. We do that by
         improving student capability and skills, by making our products more sustainably, by building a creative and
@@ -211,20 +225,20 @@
   </div>
 
 
-  <h1 class="text-center my-1">Our Team</h1>
+  <h1 class="text-center my-1 backcolor">Our Team</h1>
 
 
   <div class="container backcolor">
     <div class="row justify-content-center">
       <div class="col-md-4 w-auto my-3">
-        <div class="card shadow" style="width: 20rem;">
+        <div class="card shadow cardcolor" style="width: 20rem;">
           <div class="inner">
             <img class="card-img-top" src="./images/shubhamkhunt.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
             <h4 class="card-title">Shubham Khunt</h4>
             <p class="card-title">CEO & Founder</p>
-            <button id="conbtn1" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <button id="conbtn1" type="button" class="btn btn-dark" btn-lg btn-block">Contact</button>
             <div id="showmynum1"></div>
           </div>
         </div>
@@ -232,28 +246,28 @@
 
 
       <div class="col-md-4 w-auto my-3">
-        <div class="card shadow" style="width: 20rem;">
+        <div class="card shadow cardcolor" style="width: 20rem;">
           <div class="inner">
             <img class="card-img-top" src="./images/mikeross.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
             <h4 class="card-title">Mike Ross</h4>
             <p class="card-title">Art Director</p>
-            <button id="conbtn2" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <button id="conbtn2" type="button" class="btn btn-dark" btn-lg btn-block">Contact</button>
             <div id="showmynum2"></div>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 w-auto my-3">
-        <div class="card shadow" style="width: 20rem;">
+        <div class="card shadow cardcolor" style="width: 20rem;">
           <div class="inner">
             <img class="card-img-top" src="./images/johncrippo.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
             <h4 class="card-title">John Crippo</h4>
             <p class="card-title">Designer</p>
-            <button id="conbtn3" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <button id="conbtn3" type="button" class="btn btn-dark" btn-lg btn-block">Contact</button>
             <div id="showmynum3"></div>
           </div>
         </div>
@@ -263,12 +277,13 @@
     <!-- about end -->
 
 
+
     <hr class="pt-5">
 
 
     <!-- contact form start -->
 
-    <div class="container" id="contactusid">
+    <div class="container backcolor" id="contactusid">
       <div style="text-align:center">
         <h1>Contact Us</h1>
         <p>Swing by for a cup of coffee, or leave us a message:</p>
@@ -292,7 +307,7 @@
             </select>
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-            <button type="button" class="btn btn-primary" id="consub">Submit</button>
+            <button type="button" class="btn feedbackbutton" id="consub">Send</button>
           </form>
         </div>
       </div>
@@ -300,16 +315,17 @@
 
     <!-- contact form end -->
 
-  <!-- footer start -->
+    <!-- footer start -->
 
-  <footer class="mt-1">
-    <div class="text-center">
-      <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html" style="text-decoration: underline;color: black;" >Privacy Policy</a></span></p>
-    </div>
-  </footer>
-  <!-- footer end -->
+    <footer class="mt-1">
+      <div class="text-center">
+        <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html"
+              style="text-decoration: underline;color: black;">Privacy Policy</a></span></p>
+      </div>
+    </footer>
+    <!-- footer end -->
 
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -323,8 +339,8 @@
 
     <script src="./javascripts/usersignup.js"></script>
     <script src="./javascripts/userlogin.js"></script>
-    <script src="./javascripts/contactus.js"></script>
     <script src="./javascripts/mycontact.js"></script>
+    <script src="./javascripts/contactus.js"></script>
 </body>
 
 </html>

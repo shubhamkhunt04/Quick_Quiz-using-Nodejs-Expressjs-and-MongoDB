@@ -1,13 +1,12 @@
+let token = localStorage.getItem("token")
 
-    let token = localStorage.getItem("token")
+let userscore = sessionStorage.getItem("myscore"); // fetching userscore from session storage
+console.log(userscore);
+let tq = sessionStorage.getItem('totalqustion');
 
-    let userscore = sessionStorage.getItem("myscore");  // fetching userscore from session storage
-    console.log(userscore);
-    let tq = sessionStorage.getItem('totalqustion');
+var htmls = `
 
-       var htmls = `
-
-       <em><h1 id="demo" class="text-center my-3 display-2 border border-dark rounded-circle zoom animate">Result<h1></em>
+       <em><h1 id="demo" class="text-center my-3 display-2 border border-dark rounded zoom animate">Result<h1></em>
   
        <!-- table start -->
    
@@ -40,13 +39,20 @@
        <div class="row">
        
         <img src="./images/certificate.jpg" class="w-25 zoom" alt="certificate">
-        <h1 class="my-5 zoom scal" id="textsize">Congretulations</h1>
+        <h1 class="my-5 scal" id="textsize">Congretulations</h1>
        </div>
        </div>
        `
-    console.log(htmls)
-    
-    document.getElementById('myscores').innerHTML = htmls;
-    
+console.log(htmls)
 
-    
+document.getElementById('myscores').innerHTML = htmls;
+
+/*
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/

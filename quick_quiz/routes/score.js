@@ -10,7 +10,7 @@ const users = express.Router();
 users.use(bodyParser.json());
 
 users.route('/')
-    .get(authenticate.verifyUser,(req, res, next) => {
+    .get(authenticate.verifyUser, (req, res, next) => {
         User.findById(req.user._id)
             .then((user) => {
                 res.statusCode = 200;
@@ -27,21 +27,19 @@ users.route('/')
 
         User.findById(req.user._id)
             .then((user) => {
-                console.log(user);
-                if(user!=null)
-                {
-                user.score = req.body.score;     
-                res.statusCode = 200;
-                res.setHeader('Content-Type', 'application/json');
-                res.json(user);
-                user.save();
-                }
-                else{
-                    let err = new Error("your score is not updated");
-                    next(err);
-                    return;
-                }
-            },
+                    console.log(user);
+                    if (user != null) {
+                        user.score = req.body.score;
+                        res.statusCode = 200;
+                        res.setHeader('Content-Type', 'application/json');
+                        res.json(user);
+                        user.save();
+                    } else {
+                        let err = new Error("your score is not updated");
+                        next(err);
+                        return;
+                    }
+                },
                 (err) => next(err))
             .catch((err) => next(err));
     })
@@ -51,3 +49,13 @@ users.route('/')
     });
 
 module.exports = users;
+
+/*
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/

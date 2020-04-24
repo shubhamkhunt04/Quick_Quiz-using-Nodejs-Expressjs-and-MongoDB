@@ -12,79 +12,92 @@
 
   <title>Quiz</title>
   <style>
-    body {
-      background-color: #4FC3F7
+    .backgroundcolor {
+      /* background-color: #4FC3F7 */
+      background: #aa4b6b;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     }
 
-    button {
+    .submitbutton {
       margin: 0 auto;
       display: block;
+      background: #000000;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #434343, #000000);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #434343, #000000);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
   </style>
 </head>
 
 
-<body>
- <!-- navbar start -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand font-weight-bold text-warning" href="#">Quick Quiz</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+<body class="backgroundcolor">
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand font-weight-bold text-warning" href="#">Quick Quiz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-  </button>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-              <a class="nav-link active zoom" href="dash.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link active zoom" href="dash.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
 
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link zoom" href="ranking.html">Ranking<span
-                      class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link zoom" href="ranking.html">Ranking<span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
 
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link zoom" href="about.html">About<span class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link zoom" href="about.html">About<span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
 
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link zoom" href="contactus.html">Contact<span class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link zoom" href="contactus.html">Contact<span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
       <button type="button" class="btn btn-outline-warning mx-2" id="userlogout">
-          Logout
+        Logout
       </button>
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
-<!-- navbar end  -->
+  <!-- navbar end  -->
 
   <div id="show"></div>
 
   <div id="mychoice"></div>
 
   <div class="container">
-    <button type="button" class="btn-lg btn-dark zoom w-25 mb-5 zoom text-center" id="anssub">Submit</button>
+    <button type="button" class="btn-lg zoom mb-5 zoom text-white submitbutton"
+      id="anssub">Finish Quiz</button>
   </div>
-
 
   <!-- footer start -->
 
   <footer class="mt-1">
     <div class="text-center">
-      <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html" style="text-decoration: underline;color: black;" >Privacy Policy</a></span></p>
+      <p class="text-white">© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html"
+            style="text-decoration: underline;color: white;">Privacy Policy</a></span></p>
     </div>
   </footer>
   <!-- footer end -->
@@ -103,3 +116,13 @@
 </body>
 
 </html>
+
+<!-- 
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+ -->

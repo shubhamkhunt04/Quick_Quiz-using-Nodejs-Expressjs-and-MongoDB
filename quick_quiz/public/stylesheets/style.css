@@ -8,6 +8,10 @@ html{
 body {
   /* padding: 50px; */
   font-family: 'Muli', sans-serif;
+  background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /*================ link settings============== */
@@ -16,14 +20,39 @@ a {
   color: #00B7FF;
 }
 
-.backcolor
-{
+.backcolor {
+  color: white;
   background-color: white;
+  background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /*================ carousel effect============== */
 
-.carousel-item{
+.carousel-item {
   margin-top: 55px;
 }
 
+
+/*=================== card color================== */
+.cardcolor
+{
+  background: #8360c3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+/*================ feedback submit button============= */
+.feedbackbutton {
+  color: white;
+  margin: 0 auto;
+  display: block;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

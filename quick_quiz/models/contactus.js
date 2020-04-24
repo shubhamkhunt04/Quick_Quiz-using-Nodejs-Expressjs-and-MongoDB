@@ -23,3 +23,13 @@ const contactusSchema = new Schema({
 var contact = mongoose.model('Contactus',contactusSchema);
 
 module.exports = contact;
+
+/*
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/

@@ -8,7 +8,7 @@ let params = {
         'Authorization': 'Bearer ' + token
     }
 }
-// console.log("now fetch call");
+// console.log("now fetch call time");
 fetch(url, params)
     .then((res) => {
         return res.json();
@@ -33,7 +33,7 @@ fetch(url, params)
              </thead>
              <tbody>
         `;
-        let html2 = ``   // dynamic content
+        let html2 = `` // dynamic content
         let html3 = `  </tbody>
         </table>
     </div>
@@ -53,11 +53,19 @@ fetch(url, params)
             inedex++;
         });
 
-        
+
         let html = html1 + html2 + html3
         document.getElementById('userdata').innerHTML = html;
     })
 
     .catch((err) => console.log("Error occure"));
 
+/*
+created by Shubham Khunt
 
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/

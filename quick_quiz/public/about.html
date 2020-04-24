@@ -6,71 +6,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
 
+  <link rel="stylesheet" href="./stylesheets/style.css">
   <link rel="stylesheet" href="./stylesheets/about.css">
   <link rel="stylesheet" href="./stylesheets/zoom.css">
+
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./stylesheets/style.css">
-
+  <!-- <link rel="stylesheet" href="./stylesheets/style.css">
+  <script src="https://kit.fontawesome.com/6987e708e7.js" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-  
-<!-- navbar start -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand font-weight-bold text-warning" href="#">Quick Quiz</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+
+
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand font-weight-bold text-warning" href="#">Quick Quiz</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-  </button>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-              <a class="nav-link zoom" href="dash.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link zoom" href="dash.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
 
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link zoom" href="ranking.html">Ranking<span
-                      class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link zoom" href="ranking.html">Ranking<span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
 
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link active zoom" href="about.html">About<span class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link active zoom" href="about.html">About<span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
 
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link zoom" href="contactus.html">Contact<span class="sr-only">(current)</span></a>
-          </li>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link zoom" href="contactus.html">Contact<span class="sr-only">(current)</span></a>
+        </li>
+        </li>
       </ul>
       <button type="button" class="btn btn-outline-warning mx-2" id="userlogout">
-          Logout
+        Logout
       </button>
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
-<!-- navbar end  -->
-
+  <!-- navbar end  -->
 
 
   <!-- about start -->
 
-  <div class="jumbotron jumbotron-fluid mt-3">
-    <div class="container text-center">
+  <div class="jumbotron jumbotron-fluid backcolor mt-3" id="aboutid">
+    <div class="container text-center bg-dark">
       <h1 class="mb-3">About Us</h1>
       <p class="lead">Our mission is what drives us to do everything possible to expand human potential. We do that by
         improving student capability and skills, by making our products more sustainably, by building a creative and
@@ -79,20 +82,20 @@
   </div>
 
 
-  <h1 class="text-center my-1">Our Team</h1>
+  <h1 class="text-center my-1 backcolor">Our Team</h1>
 
 
   <div class="container backcolor">
     <div class="row justify-content-center">
       <div class="col-md-4 w-auto my-3">
-        <div class="card shadow" style="width: 20rem;">
+        <div class="card shadow cardcolor" style="width: 20rem;">
           <div class="inner">
             <img class="card-img-top" src="./images/shubhamkhunt.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
             <h4 class="card-title">Shubham Khunt</h4>
             <p class="card-title">CEO & Founder</p>
-            <button id="conbtn1" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <button id="conbtn1" type="button" class="btn btn-dark" btn-lg btn-block">Contact</button>
             <div id="showmynum1"></div>
           </div>
         </div>
@@ -100,28 +103,28 @@
 
 
       <div class="col-md-4 w-auto my-3">
-        <div class="card shadow" style="width: 20rem;">
+        <div class="card shadow cardcolor" style="width: 20rem;">
           <div class="inner">
             <img class="card-img-top" src="./images/mikeross.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
             <h4 class="card-title">Mike Ross</h4>
             <p class="card-title">Art Director</p>
-            <button id="conbtn2" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <button id="conbtn2" type="button" class="btn btn-dark" btn-lg btn-block">Contact</button>
             <div id="showmynum2"></div>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 w-auto my-3">
-        <div class="card shadow" style="width: 20rem;">
+        <div class="card shadow cardcolor" style="width: 20rem;">
           <div class="inner">
             <img class="card-img-top" src="./images/johncrippo.jpg" height="215" alt="Card image cap">
           </div>
           <div class="card-body text-center">
             <h4 class="card-title">John Crippo</h4>
             <p class="card-title">Designer</p>
-            <button id="conbtn3" type="button" class="btn btn-success" btn-lg btn-block">Contact</button>
+            <button id="conbtn3" type="button" class="btn btn-dark" btn-lg btn-block">Contact</button>
             <div id="showmynum3"></div>
           </div>
         </div>
@@ -132,16 +135,15 @@
 
 
 
-  <!-- footer start -->
+    <!-- footer start -->
 
-  <footer class="mt-1">
-    <div class="text-center">
-      <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html" style="text-decoration: underline;color: black;" >Privacy Policy</a></span></p>
-    </div>
-  </footer>
-  <!-- footer end -->
-
-
+    <footer class="mt-1">
+      <div class="text-center">
+        <p>© Copyright 2020 By Shubham Khunt. <span><a href="./privacypolicy.html"
+              style="text-decoration: underline;color: black;">Privacy Policy</a></span></p>
+      </div>
+    </footer>
+    <!-- footer end -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"></script>
@@ -156,3 +158,13 @@
 </body>
 
 </html>
+
+<!-- 
+created by Shubham Khunt
+
+============contact============
+
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+ -->

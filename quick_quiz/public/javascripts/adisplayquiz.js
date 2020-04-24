@@ -1,6 +1,4 @@
 let token = localStorage.getItem("token");
-// document.getElementById('startid').addEventListener('click',(e)=>{
-
 
 let url = 'http://localhost:3000/addquiz';
 
@@ -16,11 +14,11 @@ fetch(url, params)
     .then((res) => res.json())
     .then((json) => {
 
-        sessionStorage.setItem('jsonquizdata',JSON.stringify(json));// storing all qustion into session storage
+        sessionStorage.setItem('jsonquizdata', JSON.stringify(json)); // storing all qustion into session storage
 
         var index = 1;
         let html = "";
-        html1 = `<hr><div class="container my-5 w-75 table-responsive">
+        html1 = `<hr><div class="container my-5 table-responsive">
     <table class="table table-hover table-primary" id="outline">
       <thead>
         <tr>
@@ -52,23 +50,21 @@ fetch(url, params)
         // console.log(html)
         document.getElementById('quiztable').innerHTML = html;
 
-        for(let i=1;i<index;i++)
-        {
-            document.getElementById(`startbtn${i}`).addEventListener('click',(e)=>{
+        for (let i = 1; i < index; i++) {
+            document.getElementById(`startbtn${i}`).addEventListener('click', (e) => {
                 console.log(e.target.value);
-                sessionStorage.setItem('targetquiz',e.target.value);
+                sessionStorage.setItem('targetquiz', e.target.value);
                 location = "../quiz.html"
             })
         }
 
-        for(let i=1;i<index;i++)
-        {
-            document.getElementById(`deletebtn${i}`).addEventListener('click',(e)=>{
+        for (let i = 1; i < index; i++) {
+            document.getElementById(`deletebtn${i}`).addEventListener('click', (e) => {
                 // console.log(document.getElementById(`deletebtn${i}`).value);
-                let targetquizForDelete =  document.getElementById(`deletebtn${i}`).value;
-                
+                let targetquizForDelete = document.getElementById(`deletebtn${i}`).value;
+
                 let url = `http://localhost:3000/addquiz/${targetquizForDelete}`;
-            
+
                 console.log(url)
                 let params = {
                     method: 'DELETE',
@@ -77,54 +73,26 @@ fetch(url, params)
                         'Authorization': 'Bearer ' + token
                     }
                 }
-            
+
                 fetch(url, params)
                     .then((res) => {
                         return res.json();
                     })
                     .then((json) => {
-                       console.log("deleted ",json);
-                       location.reload(); 
+                        console.log("deleted ", json);
+                        location.reload();
                     })
-                    .catch((err) => alert("Unauthorized user",err));
+                    .catch((err) => alert("Unauthorized user", err));
             })
-            
+
         }
-        
-// document.getElementById(`startbtn${index}`).addEventListener('click',(e)=>{
-//     console.log(`clicked ${index}`);
-// })
     })
+/*
+created by Shubham Khunt
 
+============contact============
 
-// fetch(url,params)
-// .then((res)=> res.json())
-// .then((json)=>{
-//     html = "";
-//     json.forEach(element => {
-//         console.log(element)
-//         html+= `<div id="nav">
-//         <b>Qustion :</b>
-//         <p>${element.qustion}</p>
-//         <br>
-//         <div>
-//         <p>options</p>
-//         <br>
-//         <b>A : </b>${element.options[0].A}
-//         <br>
-//         <b>B : </b>${element.options[1].B}
-//         <br>
-//         <b>C : </b>${element.options[2].C}
-//         <br>
-//         <b>D : </b>${element.options[3].D}
-//         </div>
-//     </div>  `
-
-//     });
-
-//     sessionStorage.setItem('mydata',JSON.stringify(json));
-//     location = "../quiz.html"
-
-// console.log(html)
-// });
-// })
+Email   :-   shubhamkhunt08@gmail.com
+github  :-   https://github.com/shubhamkhunt04
+linkdin :-   https://www.linkedin.com/in/shubhamkhunt
+*/
