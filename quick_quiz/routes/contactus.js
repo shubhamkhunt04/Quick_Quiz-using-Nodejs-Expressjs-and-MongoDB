@@ -10,7 +10,7 @@ const contact = express.Router();
 contact.use(bodyParser.json());
 
 contact.route('/')
-    .get((req, res, next) => {
+    .get(authenticate.verifyUser, authenticate.verifyAdmin,(req, res, next) => {
         contactus.find({})
             .then((leader) => {
                 res.statusCode = 200;

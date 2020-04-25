@@ -49,7 +49,7 @@ document.getElementById('addqus').addEventListener('click', (e) => {
             return res.json();
         })
         .then((json) => {
-            console.log(json);
+            //console.log(json);
         })
 
         .catch((err) => console.log("Error occure", err));

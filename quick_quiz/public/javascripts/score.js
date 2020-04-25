@@ -43,7 +43,7 @@ var htmls = `
        </div>
        </div>
        `
-console.log(htmls)
+//console.log(htmls)
 
 document.getElementById('myscores').innerHTML = htmls;
 

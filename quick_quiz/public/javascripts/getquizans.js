@@ -11,7 +11,7 @@ let qustionindex = 1; // for qustion indexing
 html = "";
 jsondata.forEach(ele => {
     if (ele.quizname === targetquiz) {
-        console.log(ele);
+        //console.log(ele);
 
         ele.qusans.forEach(element => {
             // console.log(element.qustion);
@@ -50,7 +50,7 @@ jsondata.forEach(ele => {
 
         document.getElementById('anssub').addEventListener('click', (e) => { // user submit answer
 
-            console.log("button clicked shubham")
+            //console.log("button clicked shubham")
 
             var userans = [];
 
