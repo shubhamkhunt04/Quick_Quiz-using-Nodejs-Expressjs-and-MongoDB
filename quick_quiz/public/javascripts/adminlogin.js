@@ -6,7 +6,7 @@ document.getElementById('alogin').addEventListener('click', (e) => {
 
     // console.log("alogin clicked")
     e.preventDefault();
-    let url = "https://http://localhost:3000/adminlogin/login";
+    let url = "http://localhost:3000/adminlogin/login";
 
     let data = {
         "username": ausername.value,
@@ -48,7 +48,7 @@ document.getElementById('alogin').addEventListener('click', (e) => {
             Authentication Failed 
             </div>
           </div>`
-            //console.log("authentication failed")
+            console.log("authentication failed")
         });
 
     ausername.value = "";

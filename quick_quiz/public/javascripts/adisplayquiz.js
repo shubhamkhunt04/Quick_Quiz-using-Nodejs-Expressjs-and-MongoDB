@@ -52,7 +52,7 @@ fetch(url, params)
 
         for (let i = 1; i < index; i++) {
             document.getElementById(`startbtn${i}`).addEventListener('click', (e) => {
-               // console.log(e.target.value);
+                console.log(e.target.value);
                 sessionStorage.setItem('targetquiz', e.target.value);
                 location = "../quiz.html"
             })
@@ -65,7 +65,7 @@ fetch(url, params)
 
                 let url = `http://localhost:3000/addquiz/${targetquizForDelete}`;
 
-               // console.log(url)
+                console.log(url)
                 let params = {
                     method: 'DELETE',
                     headers: {
@@ -79,7 +79,7 @@ fetch(url, params)
                         return res.json();
                     })
                     .then((json) => {
-                       // console.log("deleted ", json);
+                        console.log("deleted ", json);
                         location.reload();
                     })
                     .catch((err) => alert("Unauthorized user", err));

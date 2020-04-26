@@ -28,7 +28,7 @@ document.getElementById('llogin').addEventListener('click', (e) => {
         })
 
         .then((json) => {
-           // console.log(json);
+            console.log(json);
             if (json.success == true) {
                location = "../dash.html";
                localStorage.setItem('token',json.token);

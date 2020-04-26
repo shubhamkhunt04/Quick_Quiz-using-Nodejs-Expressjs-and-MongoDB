@@ -88,7 +88,9 @@ quizs.route('/:quizId')
         res.end('PUT operation not supported on /addquiz/' + req.params.dishId);
     })
     .delete(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
-        Quiz.findOneAndRemove(req.params.quizId)
+        Quiz.findOneAndRemove({
+                quizname: req.params.quizId
+            })
             .then((resp) => {
                     res.statusCode = 200;
                     res.setHeader('Content-Type', 'application/json');

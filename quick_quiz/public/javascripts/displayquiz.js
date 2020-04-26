@@ -55,7 +55,7 @@ fetch(url, params)
 
         for (let i = 1; i < index; i++) {
             document.getElementById(`startbtn${i}`).addEventListener('click', (e) => {
-               // console.log(e.target.value);
+                console.log(e.target.value);
                 sessionStorage.setItem('targetquiz', e.target.value);
                 location = "../quiz.html"
             })

@@ -1,4 +1,4 @@
-let names = document.getElementById('name');
+let name = document.getElementById('name');
 let email = document.getElementById('email');
 let country = document.getElementById('country');
 let subject = document.getElementById('subject');
@@ -8,7 +8,7 @@ document.getElementById('consub').addEventListener('click', (e) => {
     let urls = "http://localhost:3000/contactus";
 
     let datas = {
-        "name": names.value,
+        "name": name.value,
         "email": email.value,
         "country": country.value,
         "subject": subject.value
@@ -25,12 +25,12 @@ document.getElementById('consub').addEventListener('click', (e) => {
             return res.json();
         })
         .then((json) => {
-            console.log(json);
+           // console.log(json);
         })
 
         .catch((err) => console.log("Error occure", err));
 
-        names.value = "",
+    name.value = "",
         email.value = "",
         country.value = "",
         subject.value = ""

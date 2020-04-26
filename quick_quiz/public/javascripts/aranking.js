@@ -68,7 +68,7 @@ fetch(url, params)
             console.log(element);
         });
         let html = html1 + html2 + html3;
-       // console.log(html);
+        console.log(html);
         document.getElementById('userranking').innerHTML = html
 
     })

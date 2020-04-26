@@ -34,7 +34,7 @@ document.getElementById('ssignup').addEventListener('click', (e) => {
         })
 
         .then((json) => {
-           // console.log(json);
+            console.log(json);
             if (json.success == true) {
                 location = "../login.html"
             }
